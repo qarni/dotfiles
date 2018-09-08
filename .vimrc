@@ -1,15 +1,7 @@
-" Key shortcuts
-" ----------------------------------------------
-"
-" undo                              'u'
-" redo                              'ctrl + r'
-" select whole line                 'shift + v'
-" delete                            'd'
-" paste                             'p'
-" mark block                        'ma'
-" end mark block and delete         'd'a'
-" close all tabs					'wqa'
-" ----------------------------------------------
+" Fatima Qarni
+" current compilation of all the vim things
+" 9/8/18
+" -------------------------
 
 " don't attempt compatibility with vi
 set nocompatible
@@ -44,7 +36,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
-" icons -- this works, but change the font cuz this is ugly...
+" icons
 Plugin 'ryanoasis/vim-devicons'
 
 " Fuzzy file finder
@@ -63,7 +55,7 @@ filetype plugin indent on
 " highlighting
 syntax on
 " color scheme
-:colorscheme moody
+:colorscheme monokai
 
 " map esc to ctrl space
 "imap <C-space> <Esc>
@@ -72,7 +64,7 @@ syntax on
 set whichwrap+=<,>,h,l,[,]
 
 " indenting
-set expandtab     " tabs are spaces
+set expandtab       " tabs are spaces
 set tabstop=4       " num spaces per tab visually
 set softtabstop=4   " num spaces per tab when editing
 set shiftwidth=4
@@ -94,6 +86,10 @@ set wildmenu
 " highlight matching parenthesis-like chars
 set showmatch
 
+" search with / options
+set hlsearch " highlight
+set ignorecase
+
 " tabs
 " new tab
 nnoremap <C-t>     :tabnew<CR>
@@ -107,6 +103,7 @@ nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
 " language specific stuff
 autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab
 autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab
 autocmd FileType html setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal shiftwidth=2 tabstop=2
 autocmd Filetype eruby setlocal tabstop=2 shiftwidth=2
@@ -127,6 +124,7 @@ autocmd! BufEnter * call NERDTreeRefresh()
 
 " Ctrln to toggle NerdTree
 map <C-n> :NERDTreeToggle<CR>
+map \nt :NERDTreeToggle<CR>
 let NerdTreeMinimalUI = 1			" get rid of help on NerdTree
 let NerdTreeDirArrows = 1
 let NerdTreeAutoDeleteBuffer = 1	" delete buffer of a deleted file
@@ -136,6 +134,7 @@ let NerdTreeQuitOnOpen = 1			" close automatically when you open a file
 let g:ctrlp_match_window = 'bottom,order:ttb'	" match files top to bottom
 let g:ctrlp_switch_buffer = 0					" open files in new buffer
 let g:ctrlp_open_new_file = 't'
+map \ff <Plug>(ctrlp)
 
 " font configurations to make devicons work
 set guifont=Consolas\ Nerd\ Font\ Complete\ Mono\ Windows\ Compatible:h12
@@ -146,6 +145,7 @@ let g:airline_theme="minimalist"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#fnamemod=':t'
+let g:airline_section_y = 0 " disable encoding section
 
 " Better whitespace settings
 let g:better_whitespace_enabled=0
