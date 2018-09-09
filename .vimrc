@@ -26,7 +26,7 @@ Plugin 'Townk/vim-autoclose'
 " Plugin 'vim-syntastic/syntastic'
 
 " auto-complete plugin
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
 " NERDTree file viewer
 Plugin 'scrooloose/nerdtree'
@@ -47,6 +47,9 @@ Plugin 'ntpeters/vim-better-whitespace'
 
 " git
 Plugin 'tpope/vim-fugitive'
+
+" TComment
+Plugin 'tomtom/tcomment_vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -89,6 +92,10 @@ set showmatch
 " search with / options
 set hlsearch " highlight
 set ignorecase
+
+" Toggle comments
+map <silent> <LocalLeader>cc :TComment<CR>
+map <silent> <LocalLeader>uc :TComment<CR>
 
 " tabs
 " new tab
@@ -142,11 +149,20 @@ set encoding=utf-8
 
 " Airline
 let g:airline_theme="minimalist"
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#fnamemod=':t'
-let g:airline_section_y = 0 " disable encoding section
+" Use default for section_a, without mode because it's obvious what mode you're in
+let g:airline_section_a = airline#section#create_left(['crypt', 'paste', 'spell', 'iminsert'])
+" let g:airline_section_x = ''
+" let g:airline_section_y = ''
+" make section z less cluttered
+let g:airline_section_z = '%l:%c'
+let g:airline_skip_empty_sections=1
 
 " Better whitespace settings
 let g:better_whitespace_enabled=0
 let g:strip_whitespace_on_save=1
+
+" get rid of YouCompleteMe preview box at top
+set completeopt-=preview
