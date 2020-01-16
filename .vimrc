@@ -25,8 +25,8 @@ Plugin 'Townk/vim-autoclose'
 " because annoying issues
 " Plugin 'vim-syntastic/syntastic'
 
-" auto-complete plugin
-Plugin 'Valloric/YouCompleteMe'
+" auto-complete plugin -- this takes far more work to get working than it's worth
+" Plugin 'Valloric/YouCompleteMe'
 
 " NERDTree file viewer
 Plugin 'scrooloose/nerdtree'
@@ -154,8 +154,6 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#fnamemod=':t'
 " Use default for section_a, without mode because it's obvious what mode you're in
 let g:airline_section_a = airline#section#create_left(['crypt', 'paste', 'spell', 'iminsert'])
-" let g:airline_section_x = ''
-" let g:airline_section_y = ''
 " make section z less cluttered
 let g:airline_section_z = '%l:%c'
 let g:airline_skip_empty_sections=1
