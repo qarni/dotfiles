@@ -2,11 +2,12 @@
 
 Hi! So, this is my set of config files (for Vim, Tmux, Bash, and Git) for when I need to be using a new computer or when I want people to try vim because I love vim (wow, did you know?).
 
-Feel free to use any/all of these, or parts of them as needed. It might be useful to just take the parts you need, and add whatever I'm missing. I got a handful of stuff from when I worked at Braintree [here](https://github.com/braintreeps/vim_dotfiles) (thanks Braintree).
+Feel free to use any/all of these, or parts of them as needed. It might be useful to just take the parts you need, and add whatever I'm missing. I got a handful of stuff for vim/tmux from when I worked at Braintree [here](https://github.com/braintreeps/vim_dotfiles) (thanks Braintree).
 
 On that note, you can find more useful plugins here: [Vim Awesome](https://vimawesome.com/).
 
-This is what it looks like:
+This is what my vim/tmux/bash looks like:
+
 ![image](https://user-images.githubusercontent.com/17552078/72491326-52867680-37df-11ea-9785-be4ee13d8319.png)
 
 ## Features:
@@ -18,6 +19,7 @@ Honestly, I've changed this so much over the years that I can't really remember 
 * Allows wrapping around to next line
 * Mouse mode (scrolling, clicking)
 * Language specific tabs/spaces
+* Color scheme: Monokai. You can change this line in the vimrc `:colorscheme [color scheme name]` to update it.
 
 #### Plugins:
 
@@ -46,6 +48,7 @@ This is so much better than using the file explorer when you need to search thro
 gcc - toggle comments on the current line
 \cc - toggle comments
 ```
+
 ##### [Fugitive](https://github.com/tpope/vim-fugitive) - Git wrapper
 
 ```
@@ -55,15 +58,17 @@ gcc - toggle comments on the current line
 ...amongst a bunch of other things
 ```
 
-##### VimAutoclose/ Surround
+##### VimAutoclose/Surround
 
 Auto closes parens, quotes etc
 
-##### [Vim Airline](https://github.com/vim-airline/vim-airline) - customizable tab bar thing
+##### [Vim Airline](https://github.com/vim-airline/vim-airline)
+
+Customizable tab bar thingy
 
 ##### Devicons - icons
 
-You can comment out line 40 `Plugin ryanoasis/vim-devicons` if you don't want to deal with installing the font for the icons
+You can comment out line 40 `Plugin ryanoasis/vim-devicons` if you don't want to deal with installing the font for the icons. They're cute though. But unnecessary.
 
 ### Tmux:
 
@@ -81,7 +86,15 @@ C-a -  - split pane horizontally
 
 Alt/Option [arrow key] - switch panes without needing prefix
 ```
-  
+
+### Bash:
+
+* Includes what git branch you are in if you're in a git repo
+
+### Git:
+
+* Includes some git aliases
+
 ## Installation/Setup:
 
 If you decide to use this :')
