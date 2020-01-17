@@ -87,11 +87,13 @@ gcc - toggle comments on the current line
 
 `prefix` + <kbd>v</kbd> - split pane vertically
 
-`prefix` + <kbd>%</kbd> - split pane horizontally
+`prefix` + <kbd>-</kbd> - split pane horizontally
 
-`prefix` + <kbd>-</kbd>  - split pane horizontally
+`prefix` + <kbd>s</kbd>  - split pane horizontally
 
 <kbd>Alt/Option</kbd> + [arrow key] - switch panes without needing prefix
+
+`prefix` + <kbd>r</kbd>  - reload tmux config file
 
 #### Plugins:
 
