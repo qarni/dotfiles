@@ -93,6 +93,9 @@ set showmatch
 set hlsearch " highlight
 set ignorecase
 
+" set F7 key to an autoformat key for C/C++ code
+map <F7> gg=G<C-o><C-o>
+
 " Toggle comments
 map <silent> <LocalLeader>cc :TComment<CR>
 map <silent> <LocalLeader>uc :TComment<CR>
